@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;font-size: 100%;font:inherit;list-style:none;color:#222; border:none;}
+img{vertical-align: middle;}
+a{text-decoration:none;cursor:pointer; outline:none;}
+a:hover{text-decoration:none;}
+body{font-family: "微软雅黑",arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;font-size:14px;color:#333;background:#fff;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clear{clear: both;}
+.bb{font-weight:bold;}
+input[type=text], textarea {-webkit-appearance: none;-webkit-border-radius: 0;outline: 0;}
+.clearfix{}
+.clearfix:before, .clearfix:after { display: table; content: ""; line-height: 0; }
+
+.m_body{ max-width:970px; margin:0px auto; padding:0px; overflow:hidden;}
+/*游戏开始*/
+.m_tishi{ background:url(../images/tishi.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; position:absolute; top:0px; left:0px; z-index:9999; width:100%; height:100%; text-indent:-999em;}
+.m_game_start{ width:100%; height:100%; position:relative;}
+.m_game_t{ width:100%; }
+.m_game_t img{ width:100%;}
+.m_game_tbg{ position:absolute; top:0px; left:0px; width:100%; height:100%; background:url(../images/m_qiubg.jpg) no-repeat center 0px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_game_btn{ width:100%;}
+.m_game_btn a{ position:absolute; bottom:7%; width:40%; height:8.5%; text-indent:-999em; background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_game_btn a.m_huo{ background-image:url(../images/rule.png); left:5%;}
+.m_game_btn a.m_kai{ background-image:url(../images/stbtn.png); right:5%;}
+
+.m_gamebg{ position:absolute; top:0px; left:0px; width:100%; height:100%; background:url(../images/mgamebg.jpg) no-repeat center 0px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_game_top{ width:100%; display:inline-block; position:absolute; top:8px; left:0px; z-index:999}
+.m_game_time{ background:url(../images/time.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; position:absolute; top:2%; left:3%; width:40%; height:5%;}
+.m_gt{ position:absolute; top:39%; left:25%; width:70%; height:49%; z-index:99; display:block;background:url(../images/tt.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_game_score{ position:absolute; top:2%; right:3%; width:22%; height:5%; background:url(../images/score.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_st{ position:absolute; right:7%; top:35%; font-size:27px; color:#fff; font-weight:bold; text-shadow:#442204 -2px 1px 1px;}
+.m_start{ position:absolute; top:42.5%; left:38.5%; width:23%; height:15%; background:url(../images/start.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; text-indent:-999em; z-index:9;}
+.m_read{ position:absolute; top:41.5%; left:36%; width:29%; height:15%; background:url(../images/read_go.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; text-indent:-999em; z-index:9;}
+.m_g_3{ position:absolute; top:41.5%; left:36%; width:28%; height:15%; text-indent:-999em; background:url(../images/3.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; z-index:9;}
+.m_g_2{ position:absolute; top:41.5%; left:36%; width:28%; height:15%; text-indent:-999em; background:url(../images/2.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; z-index:9;}
+.m_g_1{ position:absolute; top:41.5%; left:36%; width:28%; height:15%; text-indent:-999em; background:url(../images/1.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; z-index:9;}
+
+/*游戏进行*/
+.m_g_goalie{}
+.m_g_pbg{ position:absolute; width:19%; top:53%; left:41%; z-index:1 }
+.m_g_pbg img{ width:100%;}
+.m_toux{}
+.m_toux li{ background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; display:none; position:absolute; width:66%; height:47%; top:10%; z-index:1; left:18%;}
+.m_toux li.m_t1{ background-image:url(../images/m_p1.png);}
+.m_toux li.m_t2{ background-image:url(../images/m_p2.png);}
+.m_toux li.m_t3{ background-image:url(../images/m_p3.png);}
+.m_toux li.m_t4{ background-image:url(../images/m_p4.png);}
+.m_toux li.m_t5{ background-image:url(../images/m_p5.png); top:13%; left:16.5%; width:69%;}
+.m_toux li.cur{ display:block;}
+
+.m_kongt_b{ width:100%; position:absolute; bottom:0px; left:0px;}
+.m_kongt{ width:100%; height:100%; position:absolute; bottom:0px; left:0px;}
+.m_kongtbg{}
+.m_kongtbg img{ width:100%;}
+.m_kt{ display:inline-block; width:100%;}
+.m_kt li{ width:26%; position:absolute; top:10%; display:block; background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; z-index:999;}
+.m_kt li img{ width:100%;}
+.m_kt li.m_kt1{ background-image:none;}
+.m_kt li.m_kt2{ background-image:url(../images/m_kt3.png);}
+.m_kt li.m_kt3{ background-image:none;}
+.m_kt li.m_w1{ left:4%;}
+.m_kt li.m_w2{ left:37%;}
+.m_kt li.m_w3{ left:70%;}
+.m_q{ display:inline-block; width:100%;}
+.m_q li{ background:url(../images/m_q.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; float:left; width:21%; display:none; position:absolute; top:16%; left:0px; z-index:998;}
+.m_q li img{ width:100%;}
+.m_q li.m_q1{ left:7%;}
+.m_q li.m_q2{ left:40%;}
+.m_q li.m_q3{ left:73%;}
+.m_q li.cur{ display:block;}
+
+/*再试一次*/
+.m_again{ background:url(../images/tbg.png) repeat; width:100%; height:100%; position:absolute; left:0%; top:0%; z-index:9999;}
+.m_a_b{ position:absolute; top:10%; left:12%; width:78%; height:57%; background:url(../images/kongt.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_astar{ width:100%; display:inline-block;}
+.m_star1{ position:absolute; top: 27%; left: 21%; width: 14%; height: 13%; background:url(../images/star1.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_star2{ position:absolute; top: 22%; left: 39%; width: 18%; height: 15%; background:url(../images/star2.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_star3{ position:absolute; top: 27%; left:62%; width: 14%; height: 13%; background:url(../images/star3.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_ssc{ position:absolute; top:44%; left:56%; width:100%; font-size:27px; color:#fff; font-weight:bold; text-shadow: -2px -2px 1px #442204,2px 2px 1px #442204,2px 2px 1px #442204;}
+.m_ssc p{ color:#fff; line-height:1.8; }
+
+.m_sbtn{ position:absolute; text-indent:-999em; bottom:18%; left:24%; width:50%; height:14.6%; background:url(../images/again.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.share{ width:100%;}
+.share .bdsharebuttonbox a{ padding:0px !important; margin:0px; background-position:inherit;}
+.share .bdsharebuttonbox a.bds_weixin{ position:absolute; width:19.5%; height:18.5%; bottom:-5%;  left:26%; background:url(../images/sha.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.share .bdsharebuttonbox a.bds_tsina { position:absolute; width:19.5%; height:18.5%; bottom:-5%;  right:27%; background:url(../images/sina.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.share .bdsharebuttonbox a:hover { color: #333; opacity:1;filter: alpha(opacity=100); }
+
+
+/*失败*/
+.m_try{ background:url(../images/tbg.png) repeat; width:100%; height:100%; z-index:9999;}
+.m_try .m_a_b{ position:absolute; top:10%; left:12%; width:78%; height:57%; background:url(../images/kongta.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_try .m_astar{ width:100%; display:inline-block;}
+.m_try .m_star1{ position:absolute; top: 27%; left: 21%; width: 14%; height: 13%; background:url(../images/star1.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_try .m_star2{ position:absolute; top: 22%; left: 39%; width: 18%; height: 15%; background:url(../images/star2.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_try .m_star3{ position:absolute; top: 27%; left:61%; width: 14%; height: 13%; background:url(../images/star3.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.m_try .m_ssc{ position:absolute; top:43%; left:54%; width:100%; font-size:27px; color:#fff; font-weight:bold; text-shadow: -2px -2px 1px #442204,2px 2px 1px #442204,2px 2px 1px #442204;}
+.m_try .m_ssc p{ color:#fff; }
+
+.m_try .m_sbtn{ position:absolute; text-indent:-999em; bottom:18%; left:24%; width:50.8%; height:14.7%; background:url(../images/againa.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+/*loading*/
+.m_load{ background:url(../images/loading.jpg) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width:100%; height:100%; position:absolute; top:0px; left:0px;}
+
+/*活动规则*/
+.m_rule{ background:url(../images/ru.jpg) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width:100%; height:100%; position:absolute; top:0px; left:0px;}
+.m_return{ position:absolute; bottom:1%; left:26%; width:48%; height:15%; background:url(../images/return.png) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; text-indent:-999em; }
+
+
+
+
+@media only screen and (max-width:319px){
+.m_game_score .m_st{ font-size:12px; top:20%; width:72%;}
+.m_ssc p{ line-height:1.6; font-size:12px;}
+}
+@media only screen and (min-width:971px){
+.m_game_score .m_st{top:35%; font-size:27px;}
+.m_ssc p{ line-height:2.2; font-size:35px;}
+}
+@media (min-width:320px) and (max-width:359px){
+.m_game_score .m_st{ font-size:14px; top:23%;}
+.m_ssc p{ line-height:1.6; font-size:17px;}
+}
+@media (min-width:360px) and (max-width:389px){
+.m_game_score .m_st{ font-size:13px; top:25%;}
+.m_ssc p{ line-height:1.6; font-size:18px;}
+}
+@media (min-width:390px) and (max-width:419px){
+.m_game_score .m_st{ font-size:14px; top:25%;}
+.m_ssc p{ line-height:1.6; font-size:19px;}
+}
+@media (min-width:420px) and (max-width:449px){
+.m_game_score .m_st{ font-size:15px; top:26%;}
+.m_ssc p{ line-height:1.6; font-size:20px;}
+}
+@media (min-width:450px) and (max-width:479px){
+.m_game_score .m_st{ font-size:16px; top:26%;}
+.m_ssc p{ line-height:1.8; font-size:21px;}
+}
+@media (min-width:480px) and (max-width:529px){
+.m_game_score .m_st{ font-size:16px; top:32%;}
+.m_ssc p{ line-height:1.8; font-size:22px;}
+}
+@media (min-width:530px) and (max-width:629px){
+.m_game_score .m_st{ font-size:18px; top:34%;}
+.m_ssc p{ line-height:2; font-size:23px;}
+}
+@media (min-width:630px) and (max-width:729px){
+.m_game_score .m_st{ font-size:20px; top:34%;}
+.m_ssc p{ line-height:2; font-size:25px;}
+}
+@media (min-width:730px) and (max-width:829px){
+.m_game_score .m_st{ font-size:22px; top:34%;}
+.m_ssc p{ line-height:2; font-size:29px;}
+}
+@media (min-width:830px) and (max-width:870px){
+.m_game_score .m_st{ font-size:25px; top:34%;}
+.m_ssc p{ line-height:2; font-size:32px;}
+}
+@media (min-width:871px) and (max-width:970px){
+.m_game_score .m_st{ font-size:27px; top:35%;}
+.m_ssc p{ line-height:2; font-size:35px;}
+}
+

@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/index.css?v=20140618012" rel="stylesheet" type="text/css">
+<title>爽赢足球夜 踢飞空调病</title>
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,target-densitydpi=device-dpi,user-scalable=0" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script >
+var share_text = document.title;
+</script>
+</head>
+
+<body>
+<div class="m_body" id="loading">
+	<div class="m_game_start">
+    	<div class="m_game_t"><img src="images/m_game_start.png"></div>
+        <div class="m_load"></div>
+        <div id="load_img" style="display:none;">
+        <img src="images/m_kt.png">
+        <img src="images/m_p1bg.png">
+        <img src="images/m_p2bg.png">
+        <img src="images/m_p3bg.png">
+        <img src="images/1.png">
+        <img src="images/2.png">
+        <img src="images/3.png">
+        <img src="images/kongt.png">
+        <img src="images/m_game_start.png">
+        <img src="images/m_kt.png">
+        <img src="images/m_kt3.png">
+        <img src="images/m_ktbg.png">
+        <img src="images/m_p2.png">
+        <img src="images/m_p2abg.png">
+        <img src="images/m_pbg.png">
+        <img src="images/m_q.png">
+        <img src="images/m_rep.png">
+        <img src="images/m_starbg.png">
+        <img src="images/mgamebg.jpg">
+        <img src="images/read_go.png">
+        <img src="images/score.png">
+        <img src="images/star1.png">
+        <img src="images/star2.png">
+        <img src="images/star3.png">
+        <img src="images/start.png">
+        <img src="images/tbg.png">
+        <img src="images/time.png">
+        <img src="images/tishi.png">
+        <img src="images/again.png">
+        <img src="images/tishi.png">
+        <img src="images/m_p1.png">
+        <img src="images/m_p2.png">
+        <img src="images/m_p3.png">
+        <img src="images/m_p4.png">
+        <img src="images/m_p5.png">
+        <img src="images/againa.png">
+        <img src="images/kongta.png">
+        <img src="images/tt.png" onload="football.instructions();">
+        </div>
+    </div>
+</div>
+<div class="m_body" id="game_page" style="display:none">
+	<div class="m_game_start">
+    	<div class="m_game_t"><img src="images/m_game_start.png"></div>
+        <div class="m_gamebg"></div>
+        <!--操作提示-->
+		<div class="m_tishi" id="op_tip"  style="display:none;">操作提示</div>
+        <div class="m_start" id="start_button" style="display:none;">开始按钮</div>
+        <div class="m_read" data-ready="1"style="display:none;">read go</div>
+        <div class="m_g_3" id="ready_tip" style="display:none;">3</div>
+        <div class="m_g_2" data-ready="3" style="display:none;">2</div>
+        <div class="m_g_1" data-ready="2" style="display:none;">1</div>
+        <div class="m_game_time"><span class="m_gt"></span></div>
+        <div class="m_game_score"><span class="m_st">0</span></div>
+        <div class="m_g_pbg"><img src="images/m_pbg.png"></div>
+        <div class="m_g_goalie">
+        	<ul class="m_toux">
+            	<li class="m_t1 cur"></li>
+            	<li class="m_t2"></li>
+            	<li class="m_t3"></li>
+            	<li class="m_t4"></li>
+            	<li class="m_t5"></li>
+            </ul>
+        </div>
+        <div class="m_kongt_b">
+        	<div class="m_kongtbg"><img src="images/m_ktbg.png"></div>
+	        <div class="m_kongt">
+	        	<ul class="m_kt">
+	            	<li class="m_w1 m_kt1"><img src="images/m_kt.png"></li>
+	            	<li class="m_w2 m_kt2"><img src="images/m_kt.png"></li>
+	            	<li class="m_w3 m_kt3"><img src="images/m_kt.png"></li>
+	            </ul>
+	        	<ul class="m_q">
+	            	<li class="m_q1"><img src="images/m_kt.png"></li>
+	            	<li class="m_q2"><img src="images/m_kt.png"></li>
+	            	<li class="m_q3"><img src="images/m_kt.png"></li>
+	            </ul>            
+	        </div>
+        </div>
+        <div class="m_again" id="play_again" style="display:none;">
+        	<div class="m_a_b">
+            	<div class="m_astar">
+                	<div class="m_star1"></div>
+                	<div class="m_star2"></div>
+                	<div class="m_star3"></div>
+                </div>
+                <div class="m_ssc">
+                	<p class="m_xx" id="succ_shoot_num">0</p>
+                	<p class="m_cc">292</p>
+                </div>
+                <a href="javascript:;" id="play_again_button" class="m_sbtn">再来一次</a>
+                <div class="share">
+                    <div class="bdsharebuttonbox">
+                    <a title="分享到新浪微博" href="#" class="bds_tsina m_sina" data-cmd="tsina"></a>
+                    <a title="分享到微信" href="#" class="bds_weixin m_weixin" data-cmd="tqq"></a>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <div class="m_again m_try" id="try_again" style="display:none;">
+        	<div class="m_a_b">
+            	<div class="m_astar">
+                	<div class="m_star1"></div>
+                	<div class="m_star2"></div>
+                	<div class="m_star3"></div>
+                </div>
+                <div class="m_ssc">
+                	<p class="m_xx" id="fail_shoot_num">0</p>
+                	<p class="m_cc">292</p>
+                </div>
+                <a href="javascript:;" id="try_again_button" class="m_sbtn">再来一次</a>
+               <div class="share">
+                    <div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina m_sina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_weixin m_weixin" data-cmd="tqq"></a></div>
+				</div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":'',"bdMini":"2","bdMiniList":false,"bdPic":'http://'+window.location.host+'/haier/2014/images/m_qiubg.jpg?v=20140619001',"bdStyle":"0","bdSize":"24"},"share":{}};</script>
+<script type="text/javascript" src="js/weixin_share.js?v=20140618010"></script>
+<script type="text/javascript" src="js/football.js?v=20140618008"></script>
+<script type="text/javascript">
+(function($){
+	setTimeout(function(){
+		if(loading === true){
+			football.instructions();
+		}
+	},10000);
+	$('#play_again_button,#try_again_button').live('touchstart click',function(){
+		football.retry();
+	});
+})(jQuery);
+</script>
+</body>
+</html>
